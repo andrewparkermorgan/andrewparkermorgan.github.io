@@ -1,0 +1,2946 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,  initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<!-- <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png"> -->
+
+		<title>wild mouse genomes project: home</title>
+
+		<!-- core minified CSS -->
+		<link rel="stylesheet" href="../dist/css/bootstrap.min.css">
+
+		<!-- Optional theme(s) -->
+		<link rel="stylesheet" href="../dist/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../dist/css/jumbotron-narrow.css">
+		<link rel="stylesheet" href="../dist/css/font-awesome.min.css">
+
+		<!-- icons via CDN -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+		<!-- core minified JavaScript -->
+		<script src="../dist/js/bootstrap.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<div class="jumbotron">
+
+				<div class="media">
+					<div class="media-body"><h2 class="media-heading text-muted">wild mouse genomes project</h3></div>
+					<div class="media-right"><img class="media-object" src="../assets/phylopic_mouse.png" /></div>
+				</div>
+
+			</div>
+
+			<div class="header">
+
+				<ul class="nav nav-pills">
+				  <li role="presentation" class="active"><a href="#intro">overview</a></li>
+				  <li role="presentation"><a href="#methods">methods</a></li>
+				  <li role="presentation"><a href="#samples">samples</a></li>
+				</ul>
+
+			</div>
+
+			<div class="row marketing">
+
+				<a name="intro"></a>
+				<h3>Overview</h3>
+				<p>This page represents an effort to aggregate all existing whole-genome sequence data from wild house mice (<em>Mus musculus</em>) in a single location. For now I have dubbed it, unofficially, the Wild Mouse Genomes Project, although this is not an entity recognized by any institution or funding agency. The data linked here is either available in public repositories, or submission to such repositories is in process. The underlying biological specimens have been described in published literature. Except where otherwise indicated, the maintaner of this website does not claim credit for either the sequence data or the underlying biological specimen, and users of this data are encouraged to contact the data generators with any questions regarding provenance, reanalysis or reuse.</p>
+				<p />
+				<p>Primary data comes from the following publications. <strong>Please cite them if using this data in pubished work.</strong></p>
+				<ol>
+					<li>
+						Halligan DL, et al. (2013) Contributions of protein-coding and regulatory change to adaptive molecular evolution in murid rodents. <em>PLoS Genetics</em> <strong>9</strong>: e1003995.&nbsp;
+						<a href="https://dx.doi.org/10.1371/journal.pgen.1003995">10.1371/journal.pgen.1003995</a>
+					</li>
+					<li>
+						Davies RW (2015) Factors influencing genetic variation in wild mice. PhD thesis, University of Oxford.&nbsp;
+						<a href="https://ora.ox.ac.uk/objects/uuid:ced6a42f-66f5-4001-aaf8-8059d5fcfe27">link to Oxford University Research Archive</a>
+					</li>
+					<li>
+						Harr B, et al. (2016) Genomic resources for wild populations of the house mouse, <em>Mus musculus</em> and its close relative <em>Mus spretus</em>. <em>Scientific Data</em> <strong>3</strong>: 160075.&nbsp;
+						<a href="https://dx.doi.org/10.1038/sdata.2016.75">10.1038/sdata.2016.75</a>
+					</li>
+					<li>
+						Pfifer-Rixey M, et al. (2018) The genomic basis of environmental adaptation in house mice. <em>PLoS Genetics</em> <strong>14</strong>: e1007672.&nbsp;
+						<a href="https://dx.doi.org/10.1371/journal.pgen.1007672">10.1371/journal.pgen.1007672</a>
+
+					</li>
+					<li>
+						Payseur BA, et al. (2021) Genomic targets of positive selection in giant mice from Gough Island. <em>Molecular Biology and Evolution</em> <strong>38</strong>: 911--926.&nbsp;
+						<a href="https://dx.doi.org/10.1093/molbev/msaa255">10.1093/molbev/msaa255</a>
+					</li>
+					<li>
+						Fujiwara K, et al. (2022) Insights into <em>Mus musculus</em> population structure across Eurasia revealed by whole-genome analysis. <em>Genome Biology and Evolution</em> <strong>14</strong>: evac068.&nbsp;
+						<a href="https://dx.doi.org/10.1093/gbe/evac068">10.1093/gbe/evac068</a>
+					</li>
+					<li>
+						Morgan AP, et al. (2022) Population structure and inbreeding in wild house mice (<em>Mus musculus</em>) at different geographic scales. <em>Heredity</em> <strong>129</strong>: 183--194.&nbsp;
+						<a href="https://dx.doi.org/10.1038/s41437-022-00551-z">10.1038/s41437-022-00551-z</a>
+					</li>
+				</ol>
+				<p>Should users of this site identify any errors or misrepresentations, please contact me <a href="mailto:andrew.parker.morgan@gmail.com">via email&nbsp;<i class="bi bi-envelope-fill"></i></a></p>
+
+				<a name="methods"></a>
+				<h3>Methods</h3>
+				<p>Raw paired-end sequence reads were dowloaded from the European Nucleotide Archive and aligned against the most recent version of the mouse reference genome, the <strong><a href="https://www.ncbi.nlm.nih.gov/assembly/GCF_000001635.27/">GRCm39</a>/mm39</strong> assembly. The reference sequence was obtained from <a href="https://hgdownload.soe.ucsc.edu/goldenPath/archive/mm39/">UCSC</a>, so chromosome and contig names follow their nomenclature (<code>chr1, ... chrM</code>). Because the pseudoautosomal region (PAR) is the only region of the genome represented as diploid rather than haploid in the reference, one copy was masked (sequence forced to <code>N</code>) to avoid read-depth artefacts between sexes. Reads were aligned with <code>bwa mem</code> with default parameters, and putative optical/technical duplicates marked with <code>samblaster</code> in a streaming fashion. When applicable, alignments from multiple lanes per individual were merged with <code>Picard</code>. The resulting alignments were indexed with <code>samtools</code> in the usual fashion.</p>
+				<p>Sample sex and preliminary taxonomic assignment in the table below are based on a combination of information provided in the original publications and preliminary SNV calls in coding regions.</p>
+				<p>Full pipeline to be available on Github soon.</p>
+				<p>Alignments are available in <code>*.bam</code> format via Amazon Web Services in the public S3 bucket <code>wild-mouse-genomes</code>. No guarantee is made as to how long these files will be available as there is no funding stream to cover storage costs.</p>
+
+				<a name="samples"></a>
+				<h3>Samples</h3>
+				<p>The table below lists samples currently available as part of the Wild Mouse Genomes Project. Sample IDs are those assigned by the original authors. Taxon assignments should be considered preliminary at best -- many of these individuals are inter-subspecies hybrids but are labelled with their "modal" ancestry. Location metadata is taken from the original publications. Countries are denoted by <a href="https://www.iso.org/iso-3166-country-codes.html">ISO 3166 2-letter code</a>. "Region" and "site" are meant to indicate increasingly precise geographic place names. "Locale" is a 3-letter code, assinged by the author of this page, as a convenience for data aggregation. NB: None of the geographic labels here necessarily correspond to a "population" in the ecological or genetic sense.</p>
+				<p>"Accessions" link to the European Nucleotide Archive, which also mirrors the NCBI Short Read Archive (USA) and DDBJ (Japan). Sample IDs link to the full alignment in AWS S3. MD5 checksums can be found <a href="https://wild-mouse-genomes.s3.amazonaws.com/checksums.txt">here</a>. For batch downloads, a text file of URLs to BAM files is <a href="./aws_bam_urls.txt" target="_blank">here.</a></p>
+				<div style="height: 12pt;"></div>
+				<div class="col-lg-12">
+					<table class="table table-striped">
+						<thead>
+						<tr>
+						<th style="text-align:left;"> ID </th>
+						<th style="text-align:left;"> taxon </th>
+						<th style="text-align:left;"> sex </th>
+						<th style="text-align:left;"> country </th>
+						<th style="text-align:left;"> region </th>
+						<th style="text-align:left;"> locale </th>
+						<th style="text-align:left;"> site </th>
+						<th style="text-align:left;"> accessions </th>
+						</tr>
+						</thead>
+					<tbody>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0373.bam">HI0373</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> BD </td>
+						<td style="text-align:left;"> Dhaka </td>
+						<td style="text-align:left;"> DHK </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271603" target="_blank">DRR271603</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0372.bam">HI0372</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> BD </td>
+						<td style="text-align:left;"> Dhaka </td>
+						<td style="text-align:left;"> DHK </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271602" target="_blank">DRR271602</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0347.bam">HI0347</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> BD </td>
+						<td style="text-align:left;"> Mymensingh </td>
+						<td style="text-align:left;"> MYM </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271601" target="_blank">DRR271601</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0709.bam">MG0709</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Chongqing </td>
+						<td style="text-align:left;"> CHQ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271653" target="_blank">DRR271653</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0797.bam">MG0797</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Dali </td>
+						<td style="text-align:left;"> DAL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271659" target="_blank">DRR271659</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0501.bam">MG0501</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Guilin </td>
+						<td style="text-align:left;"> GUI </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271642" target="_blank">DRR271642</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0504.bam">MG0504</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Guangzhou </td>
+						<td style="text-align:left;"> GZH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271643" target="_blank">DRR271643</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0529.bam">MG0529</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Kunming </td>
+						<td style="text-align:left;"> KMG </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271645" target="_blank">DRR271645</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0917.bam">MG0917</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Lijiang </td>
+						<td style="text-align:left;"> LIJ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271663" target="_blank">DRR271663</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0795.bam">MG0795</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Ningbo </td>
+						<td style="text-align:left;"> NGB </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271658" target="_blank">DRR271658</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0908.bam">MG0908</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Wuhan </td>
+						<td style="text-align:left;"> WUH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271662" target="_blank">DRR271662</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0115.bam">HI0115</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ID </td>
+						<td style="text-align:left;"> Bali </td>
+						<td style="text-align:left;"> BAL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271584" target="_blank">DRR271584</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0116.bam">HI0116</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ID </td>
+						<td style="text-align:left;"> Bali </td>
+						<td style="text-align:left;"> BAL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271585" target="_blank">DRR271585</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0112.bam">HI0112</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ID </td>
+						<td style="text-align:left;"> Bogor </td>
+						<td style="text-align:left;"> BOG </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271583" target="_blank">DRR271583</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0134.bam">HI0134</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ID </td>
+						<td style="text-align:left;"> Lembang </td>
+						<td style="text-align:left;"> LEM </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271586" target="_blank">DRR271586</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0313.bam">HI0313</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Bhubaneswar </td>
+						<td style="text-align:left;"> BHU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271597" target="_blank">DRR271597</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0321.bam">HI0321</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Bhubaneswar </td>
+						<td style="text-align:left;"> BHU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271598" target="_blank">DRR271598</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0185.bam">HI0185</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Delhi </td>
+						<td style="text-align:left;"> DEL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271591" target="_blank">DRR271591</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0187.bam">HI0187</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Delhi </td>
+						<td style="text-align:left;"> DEL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271592" target="_blank">DRR271592</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H12.bam">H12</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> HMP </td>
+						<td style="text-align:left;"> 5 miles from Katrain </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019144" target="_blank">ERR019144</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019199" target="_blank">ERR019199</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019200" target="_blank">ERR019200</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019201" target="_blank">ERR019201</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019202" target="_blank">ERR019202</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019203" target="_blank">ERR019203</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019204" target="_blank">ERR019204</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019205" target="_blank">ERR019205</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019222" target="_blank">ERR019222</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019259" target="_blank">ERR019259</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019260" target="_blank">ERR019260</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019261" target="_blank">ERR019261</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H14.bam">H14</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> HMP </td>
+						<td style="text-align:left;"> 7 miles from Katrain </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034298" target="_blank">ERR034298</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034299" target="_blank">ERR034299</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR037813" target="_blank">ERR037813</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019192" target="_blank">ERR019192</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019193" target="_blank">ERR019193</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019194" target="_blank">ERR019194</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019195" target="_blank">ERR019195</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019196" target="_blank">ERR019196</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019197" target="_blank">ERR019197</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019198" target="_blank">ERR019198</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019235" target="_blank">ERR019235</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019236" target="_blank">ERR019236</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H15.bam">H15</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> HMP </td>
+						<td style="text-align:left;"> Mandi </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034100" target="_blank">ERR034100</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034101" target="_blank">ERR034101</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034102" target="_blank">ERR034102</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR037828" target="_blank">ERR037828</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019145" target="_blank">ERR019145</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019146" target="_blank">ERR019146</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019147" target="_blank">ERR019147</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019148" target="_blank">ERR019148</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019149" target="_blank">ERR019149</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019150" target="_blank">ERR019150</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019151" target="_blank">ERR019151</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019219" target="_blank">ERR019219</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019250" target="_blank">ERR019250</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019251" target="_blank">ERR019251</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019252" target="_blank">ERR019252</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019253" target="_blank">ERR019253</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019254" target="_blank">ERR019254</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H24.bam">H24</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> HMP </td>
+						<td style="text-align:left;"> Revalsar mill </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034296" target="_blank">ERR034296</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034297" target="_blank">ERR034297</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR037814" target="_blank">ERR037814</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019187" target="_blank">ERR019187</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019188" target="_blank">ERR019188</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019189" target="_blank">ERR019189</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019190" target="_blank">ERR019190</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019191" target="_blank">ERR019191</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019216" target="_blank">ERR019216</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019255" target="_blank">ERR019255</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019256" target="_blank">ERR019256</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019257" target="_blank">ERR019257</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019258" target="_blank">ERR019258</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H26.bam">H26</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> HMP </td>
+						<td style="text-align:left;"> Revalsar taylor </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019153" target="_blank">ERR019153</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019154" target="_blank">ERR019154</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019155" target="_blank">ERR019155</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019156" target="_blank">ERR019156</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019157" target="_blank">ERR019157</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019158" target="_blank">ERR019158</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019159" target="_blank">ERR019159</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019213" target="_blank">ERR019213</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019227" target="_blank">ERR019227</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019228" target="_blank">ERR019228</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019229" target="_blank">ERR019229</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019230" target="_blank">ERR019230</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019231" target="_blank">ERR019231</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034300" target="_blank">ERR034300</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034301" target="_blank">ERR034301</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR037829" target="_blank">ERR037829</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H27.bam">H27</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> HMP </td>
+						<td style="text-align:left;"> Revalsar shop </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019180" target="_blank">ERR019180</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019181" target="_blank">ERR019181</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019182" target="_blank">ERR019182</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019183" target="_blank">ERR019183</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019184" target="_blank">ERR019184</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019185" target="_blank">ERR019185</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019186" target="_blank">ERR019186</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019220" target="_blank">ERR019220</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019262" target="_blank">ERR019262</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019263" target="_blank">ERR019263</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019264" target="_blank">ERR019264</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019265" target="_blank">ERR019265</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034103" target="_blank">ERR034103</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034104" target="_blank">ERR034104</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034105" target="_blank">ERR034105</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR037830" target="_blank">ERR037830</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H28.bam">H28</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> HMP </td>
+						<td style="text-align:left;"> Kunihar center market </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019141" target="_blank">ERR019141</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019206" target="_blank">ERR019206</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019207" target="_blank">ERR019207</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019208" target="_blank">ERR019208</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019209" target="_blank">ERR019209</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019210" target="_blank">ERR019210</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019211" target="_blank">ERR019211</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019212" target="_blank">ERR019212</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019221" target="_blank">ERR019221</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019268" target="_blank">ERR019268</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019269" target="_blank">ERR019269</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019270" target="_blank">ERR019270</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019271" target="_blank">ERR019271</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034307" target="_blank">ERR034307</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR037820" target="_blank">ERR037820</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H30.bam">H30</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> HMP </td>
+						<td style="text-align:left;"> Kunihar teashop </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034106" target="_blank">ERR034106</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034107" target="_blank">ERR034107</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR037816" target="_blank">ERR037816</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019152" target="_blank">ERR019152</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019218" target="_blank">ERR019218</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019223" target="_blank">ERR019223</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019224" target="_blank">ERR019224</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019225" target="_blank">ERR019225</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019226" target="_blank">ERR019226</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019243" target="_blank">ERR019243</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019244" target="_blank">ERR019244</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019245" target="_blank">ERR019245</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019246" target="_blank">ERR019246</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019247" target="_blank">ERR019247</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019248" target="_blank">ERR019248</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019249" target="_blank">ERR019249</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR029417" target="_blank">ERR029417</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR029418" target="_blank">ERR029418</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR029419" target="_blank">ERR029419</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H36.bam">H36</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> HMP </td>
+						<td style="text-align:left;"> Kunihar center market </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019143" target="_blank">ERR019143</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019166" target="_blank">ERR019166</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019167" target="_blank">ERR019167</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019168" target="_blank">ERR019168</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019169" target="_blank">ERR019169</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019170" target="_blank">ERR019170</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019171" target="_blank">ERR019171</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019172" target="_blank">ERR019172</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019215" target="_blank">ERR019215</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019237" target="_blank">ERR019237</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019238" target="_blank">ERR019238</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019239" target="_blank">ERR019239</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019240" target="_blank">ERR019240</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019241" target="_blank">ERR019241</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034302" target="_blank">ERR034302</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034303" target="_blank">ERR034303</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR037833" target="_blank">ERR037833</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0328.bam">HI0328</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Hyderabad </td>
+						<td style="text-align:left;"> HYD </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271599" target="_blank">DRR271599</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0329.bam">HI0329</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Hyderabad </td>
+						<td style="text-align:left;"> HYD </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271600" target="_blank">DRR271600</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/H34.bam">H34</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Himachal Pradesh </td>
+						<td style="text-align:left;"> KUN </td>
+						<td style="text-align:left;"> Kunihar </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034098" target="_blank">ERR034098</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR034099" target="_blank">ERR034099</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR037821" target="_blank">ERR037821</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019142" target="_blank">ERR019142</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019173" target="_blank">ERR019173</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019174" target="_blank">ERR019174</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019175" target="_blank">ERR019175</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019176" target="_blank">ERR019176</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019177" target="_blank">ERR019177</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019178" target="_blank">ERR019178</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019179" target="_blank">ERR019179</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019214" target="_blank">ERR019214</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019232" target="_blank">ERR019232</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019233" target="_blank">ERR019233</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019234" target="_blank">ERR019234</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR019242" target="_blank">ERR019242</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0159.bam">HI0159</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Leh </td>
+						<td style="text-align:left;"> LEH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271587" target="_blank">DRR271587</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0161.bam">HI0161</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Leh </td>
+						<td style="text-align:left;"> LEH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271588" target="_blank">DRR271588</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0274.bam">HI0274</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IN </td>
+						<td style="text-align:left;"> Mysore </td>
+						<td style="text-align:left;"> MYS </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271596" target="_blank">DRR271596</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4411.bam">HS4411</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Oda </td>
+						<td style="text-align:left;"> ODA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271636" target="_blank">DRR271636</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS2788.bam">HS2788</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Okinawa Island </td>
+						<td style="text-align:left;"> OKI </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271618" target="_blank">DRR271618</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0488.bam">HI0488</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> LK </td>
+						<td style="text-align:left;"> Colombo </td>
+						<td style="text-align:left;"> COL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271605" target="_blank">DRR271605</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0484.bam">HI0484</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> LK </td>
+						<td style="text-align:left;"> Peradeniya </td>
+						<td style="text-align:left;"> PER </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271604" target="_blank">DRR271604</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS1523.bam">HS1523</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> NP </td>
+						<td style="text-align:left;"> Kathmandu </td>
+						<td style="text-align:left;"> KAT </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271613" target="_blank">DRR271613</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS1467.bam">HS1467</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> NP </td>
+						<td style="text-align:left;"> Tukuche </td>
+						<td style="text-align:left;"> TUK </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271612" target="_blank">DRR271612</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0173.bam">HI0173</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> PK </td>
+						<td style="text-align:left;"> Islamabad </td>
+						<td style="text-align:left;"> ISL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271589" target="_blank">DRR271589</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0175.bam">HI0175</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> PK </td>
+						<td style="text-align:left;"> Islamabad </td>
+						<td style="text-align:left;"> ISL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271590" target="_blank">DRR271590</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0264.bam">HI0264</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> PK </td>
+						<td style="text-align:left;"> Lahore </td>
+						<td style="text-align:left;"> LAH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271594" target="_blank">DRR271594</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0273.bam">HI0273</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> PK </td>
+						<td style="text-align:left;"> Lahore </td>
+						<td style="text-align:left;"> LAH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271595" target="_blank">DRR271595</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0261.bam">HI0261</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> PK </td>
+						<td style="text-align:left;"> Sahiwal </td>
+						<td style="text-align:left;"> SAH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271593" target="_blank">DRR271593</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS1411.bam">HS1411</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Khasan </td>
+						<td style="text-align:left;"> KHS </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271610" target="_blank">DRR271610</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3025.bam">MG3025</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Vladivostok </td>
+						<td style="text-align:left;"> VLD </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271671" target="_blank">DRR271671</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW851.bam">TW851</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> CHS </td>
+						<td style="text-align:left;"> Chr-Shang </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1682002" target="_blank">ERR1682002</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1172.bam">TW1172</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> DAJ </td>
+						<td style="text-align:left;"> Da-Jia </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681990" target="_blank">ERR1681990</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW813.bam">TW813</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> GSH </td>
+						<td style="text-align:left;"> Guan-Shan </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1682000" target="_blank">ERR1682000</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1167.bam">TW1167</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> HLI </td>
+						<td style="text-align:left;"> Hou-Li </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681989" target="_blank">ERR1681989</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW667.bam">TW667</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> HSP </td>
+						<td style="text-align:left;"> Hsin-Pu </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681996" target="_blank">ERR1681996</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1143.bam">TW1143</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> HSW </td>
+						<td style="text-align:left;"> Hsin-Wu </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681987" target="_blank">ERR1681987</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1011.bam">TW1011</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> JLI </td>
+						<td style="text-align:left;"> Jia-Li </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681985" target="_blank">ERR1681985</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1145.bam">TW1145</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> JMN </td>
+						<td style="text-align:left;"> Jin-men </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681988" target="_blank">ERR1681988</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1200.bam">TW1200</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> JMN </td>
+						<td style="text-align:left;"> Jin-men </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681991" target="_blank">ERR1681991</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1231.bam">TW1231</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> JMN </td>
+						<td style="text-align:left;"> Jin-men </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681992" target="_blank">ERR1681992</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW873.bam">TW873</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> LNN </td>
+						<td style="text-align:left;"> Lin-Nei </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1682003" target="_blank">ERR1682003</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1237.bam">TW1237</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> PDN </td>
+						<td style="text-align:left;"> Ping-Dong City </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681993" target="_blank">ERR1681993</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1057.bam">TW1057</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> SHF </td>
+						<td style="text-align:left;"> Shou-Feng </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681986" target="_blank">ERR1681986</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1000.bam">TW1000</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> SHG </td>
+						<td style="text-align:left;"> Shi-Gang </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681984" target="_blank">ERR1681984</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW837.bam">TW837</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> SHJ </td>
+						<td style="text-align:left;"> Shi-Jou </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1682001" target="_blank">ERR1682001</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW807.bam">TW807</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> TAD </td>
+						<td style="text-align:left;"> Tai-Dong </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681999" target="_blank">ERR1681999</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW746.bam">TW746</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> TST </td>
+						<td style="text-align:left;"> Tsao-Tun </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681997" target="_blank">ERR1681997</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW747.bam">TW747</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> TST </td>
+						<td style="text-align:left;"> Tsao-Tun </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681998" target="_blank">ERR1681998</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS2400.bam">HS2400</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taitung </td>
+						<td style="text-align:left;"> TTU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271616" target="_blank">DRR271616</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1291.bam">TW1291</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> WUC </td>
+						<td style="text-align:left;"> Wu-Chiai </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681994" target="_blank">ERR1681994</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TW1294.bam">TW1294</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TW </td>
+						<td style="text-align:left;"> Taiwan </td>
+						<td style="text-align:left;"> WUC </td>
+						<td style="text-align:left;"> Wu-Chiai </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681995" target="_blank">ERR1681995</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0520.bam">HI0520</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> VN </td>
+						<td style="text-align:left;"> Hanoi </td>
+						<td style="text-align:left;"> HAN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271607" target="_blank">DRR271607</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HI0505.bam">HI0505</a> </td>
+						<td style="text-align:left;"> cas </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> VN </td>
+						<td style="text-align:left;"> Vinh Phuc </td>
+						<td style="text-align:left;"> VPH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271606" target="_blank">DRR271606</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0577.bam">MG0577</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Urumqi </td>
+						<td style="text-align:left;"> URM </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271647" target="_blank">DRR271647</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TP51D.bam">TP51D</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> COL </td>
+						<td style="text-align:left;"> Cologne </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899397" target="_blank">ERR899397</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TP121B.bam">TP121B</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> COL </td>
+						<td style="text-align:left;"> Cologne </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899399" target="_blank">ERR899399</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TP1.bam">TP1</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> COL </td>
+						<td style="text-align:left;"> Cologne </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899393" target="_blank">ERR899393</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TP3-92.bam">TP3-92</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> COL </td>
+						<td style="text-align:left;"> Cologne </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899394" target="_blank">ERR899394</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TP4a.bam">TP4a</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> COL </td>
+						<td style="text-align:left;"> Cologne </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899395" target="_blank">ERR899395</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TP7-10F1A2.bam">TP7-10F1A2</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> COL </td>
+						<td style="text-align:left;"> Cologne </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899400" target="_blank">ERR899400</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TP17-2.bam">TP17-2</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> Cologne </td>
+						<td style="text-align:left;"> COL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899396" target="_blank">ERR899396</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/TP81B.bam">TP81B</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> Cologne </td>
+						<td style="text-align:left;"> COL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899398" target="_blank">ERR899398</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HG06.bam">HG06</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> HGL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899777" target="_blank">ERR899777</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HG08.bam">HG08</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> HGL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899778" target="_blank">ERR899778</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HG13.bam">HG13</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> DE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> HGL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899779" target="_blank">ERR899779</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/EC_FLO_24.bam">EC_FLO_24</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> EC </td>
+						<td style="text-align:left;"> Floreana Island </td>
+						<td style="text-align:left;"> FLO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> . </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/EC_FLO_04.bam">EC_FLO_04</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> EC </td>
+						<td style="text-align:left;"> Floreana Island </td>
+						<td style="text-align:left;"> FLO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> . </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR101.bam">FR101</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Saint-Amant-Roche-Savine </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681964" target="_blank">ERR1681964</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR211.bam">FR211</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Thiolieres </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681965" target="_blank">ERR1681965</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR218.bam">FR218</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Marioux,  Bertignat </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681966" target="_blank">ERR1681966</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR227.bam">FR227</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Chabrol,  Cunlhat </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681967" target="_blank">ERR1681967</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR231.bam">FR231</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Lossedat,  Cunlhat </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681968" target="_blank">ERR1681968</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR234.bam">FR234</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Le Garet,  Vertolaye </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681969" target="_blank">ERR1681969</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR236.bam">FR236</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Bosson,  La Chapelle-Agnon </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681970" target="_blank">ERR1681970</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR246.bam">FR246</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Sauvanis,  Bertignat </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681971" target="_blank">ERR1681971</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR303.bam">FR303</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Boisseyre </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681972" target="_blank">ERR1681972</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR310.bam">FR310</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Champciaux,  Arlanc </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681973" target="_blank">ERR1681973</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR311.bam">FR311</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> La grange,  Saint-Bonnet-le-Bourg </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681974" target="_blank">ERR1681974</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR313.bam">FR313</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Germalange,  Saint-Alyre-d'Arlanc </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681975" target="_blank">ERR1681975</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR314.bam">FR314</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Chadernolle,  Marsac-en-Livradois </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681976" target="_blank">ERR1681976</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR327.bam">FR327</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> La Thioliere,  Saint-Clement-de-Valorgue </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681977" target="_blank">ERR1681977</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR329.bam">FR329</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Eglisolles </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681978" target="_blank">ERR1681978</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR330.bam">FR330</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Sauvessanges </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681979" target="_blank">ERR1681979</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR334.bam">FR334</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Saint-Bonnet-le-Chastel </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681980" target="_blank">ERR1681980</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR34.bam">FR34</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Le Perrier,  Valcivieres </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681981" target="_blank">ERR1681981</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR44.bam">FR44</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Le Moulin de Collange,  Saint-Antheme </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681982" target="_blank">ERR1681982</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/FR54.bam">FR54</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> Livradois-Forez </td>
+						<td style="text-align:left;"> LIV </td>
+						<td style="text-align:left;"> Les Ballays,  Saint-Martin-des-Olmes </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1681983" target="_blank">ERR1681983</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/14B.bam">14B</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SEV </td>
+						<td style="text-align:left;"> Severac-le-Chateau </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899406" target="_blank">ERR899406</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/15B.bam">15B</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SEV </td>
+						<td style="text-align:left;"> Severac-le-Chateau </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899407" target="_blank">ERR899407</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/16B.bam">16B</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SEV </td>
+						<td style="text-align:left;"> Severac-le-Chateau </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899408" target="_blank">ERR899408</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/18B.bam">18B</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SEV </td>
+						<td style="text-align:left;"> Severac-le-Chateau </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899401" target="_blank">ERR899401</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/B2C.bam">B2C</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SEV </td>
+						<td style="text-align:left;"> Severac-le-Chateau </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899403" target="_blank">ERR899403</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/C1.bam">C1</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SEV </td>
+						<td style="text-align:left;"> Severac-le-Chateau </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899404" target="_blank">ERR899404</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/E1B.bam">E1B</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SEV </td>
+						<td style="text-align:left;"> Severac-le-Chateau </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899405" target="_blank">ERR899405</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/F1B.bam">F1B</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> FR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SEV </td>
+						<td style="text-align:left;"> Severac-le-Chateau </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899402" target="_blank">ERR899402</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AH15.bam">AH15</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> AHZ </td>
+						<td style="text-align:left;"> Dezful </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899416" target="_blank">ERR899416</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/JR11.bam">JR11</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> AHZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899413" target="_blank">ERR899413</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AH23.bam">AH23</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> AHZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899415" target="_blank">ERR899415</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/JR15.bam">JR15</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> AHZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899414" target="_blank">ERR899414</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/JR2-F1C.bam">JR2-F1C</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> AHZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899409" target="_blank">ERR899409</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/JR5-F1C.bam">JR5-F1C</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> AHZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899410" target="_blank">ERR899410</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/JR7-F1C.bam">JR7-F1C</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> AHZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899411" target="_blank">ERR899411</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/JR8-F1A.bam">JR8-F1A</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> AHZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR899412" target="_blank">ERR899412</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3056.bam">MG3056</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Moscow </td>
+						<td style="text-align:left;"> MSC </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271677" target="_blank">DRR271677</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI_554.bam">GI_554</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> . </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI_555.bam">GI_555</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> . </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI_676.bam">GI_676</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> . </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI_791.bam">GI_791</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> . </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI40.bam">GI40</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398015" target="_blank">SRR10398015</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512679" target="_blank">SRR10512679</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI43.bam">GI43</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398014" target="_blank">SRR10398014</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512678" target="_blank">SRR10512678</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI44.bam">GI44</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398007" target="_blank">SRR10398007</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512671" target="_blank">SRR10512671</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI46.bam">GI46</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398006" target="_blank">SRR10398006</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512670" target="_blank">SRR10512670</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI48.bam">GI48</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398005" target="_blank">SRR10398005</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512669" target="_blank">SRR10512669</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI50.bam">GI50</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398004" target="_blank">SRR10398004</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512668" target="_blank">SRR10512668</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI54.bam">GI54</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398002" target="_blank">SRR10398002</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512666" target="_blank">SRR10512666</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI58.bam">GI58</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398001" target="_blank">SRR10398001</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512665" target="_blank">SRR10512665</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI62.bam">GI62</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398000" target="_blank">SRR10398000</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512664" target="_blank">SRR10512664</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI66.bam">GI66</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398012" target="_blank">SRR10398012</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512676" target="_blank">SRR10512676</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI67.bam">GI67</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398011" target="_blank">SRR10398011</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512675" target="_blank">SRR10512675</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI68.bam">GI68</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398010" target="_blank">SRR10398010</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512674" target="_blank">SRR10512674</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI69.bam">GI69</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398009" target="_blank">SRR10398009</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512673" target="_blank">SRR10512673</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI70.bam">GI70</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398008" target="_blank">SRR10398008</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512672" target="_blank">SRR10512672</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI53.bam">GI53</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398003" target="_blank">SRR10398003</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512667" target="_blank">SRR10512667</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/GI64.bam">GI64</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SH </td>
+						<td style="text-align:left;"> Gough Island </td>
+						<td style="text-align:left;"> GOU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10398013" target="_blank">SRR10398013</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR10512677" target="_blank">SRR10512677</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/UK_INA_278.bam">UK_INA_278</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> UK </td>
+						<td style="text-align:left;"> Scotland </td>
+						<td style="text-align:left;"> INA </td>
+						<td style="text-align:left;"> Inverness </td>
+						<td style="text-align:left;"> . </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR108.bam">MPR108</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768911" target="_blank">SRR7768911</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR110.bam">MPR110</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768910" target="_blank">SRR7768910</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR112.bam">MPR112</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768909" target="_blank">SRR7768909</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR113.bam">MPR113</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768908" target="_blank">SRR7768908</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR114.bam">MPR114</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768907" target="_blank">SRR7768907</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR115.bam">MPR115</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768906" target="_blank">SRR7768906</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR116.bam">MPR116</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768905" target="_blank">SRR7768905</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR118.bam">MPR118</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768904" target="_blank">SRR7768904</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR120.bam">MPR120</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768913" target="_blank">SRR7768913</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR121.bam">MPR121</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Florida </td>
+						<td style="text-align:left;"> FLA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768912" target="_blank">SRR7768912</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR123.bam">MPR123</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768921" target="_blank">SRR7768921</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR124.bam">MPR124</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768920" target="_blank">SRR7768920</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR125.bam">MPR125</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768923" target="_blank">SRR7768923</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR126.bam">MPR126</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768922" target="_blank">SRR7768922</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR128.bam">MPR128</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768917" target="_blank">SRR7768917</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR129.bam">MPR129</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768916" target="_blank">SRR7768916</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR130.bam">MPR130</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768919" target="_blank">SRR7768919</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR131.bam">MPR131</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768918" target="_blank">SRR7768918</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR132.bam">MPR132</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768915" target="_blank">SRR7768915</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR133.bam">MPR133</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Georgia </td>
+						<td style="text-align:left;"> GEO </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768914" target="_blank">SRR7768914</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR134.bam">MPR134</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768894" target="_blank">SRR7768894</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR135.bam">MPR135</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768895" target="_blank">SRR7768895</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR137.bam">MPR137</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768896" target="_blank">SRR7768896</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR138.bam">MPR138</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768897" target="_blank">SRR7768897</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR140.bam">MPR140</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768898" target="_blank">SRR7768898</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR141.bam">MPR141</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768899" target="_blank">SRR7768899</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR142.bam">MPR142</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768900" target="_blank">SRR7768900</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR143.bam">MPR143</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768901" target="_blank">SRR7768901</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR144.bam">MPR144</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768902" target="_blank">SRR7768902</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR145.bam">MPR145</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> New Hampshire </td>
+						<td style="text-align:left;"> NHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768903" target="_blank">SRR7768903</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR146.bam">MPR146</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768931" target="_blank">SRR7768931</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR147.bam">MPR147</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768930" target="_blank">SRR7768930</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR148.bam">MPR148</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768929" target="_blank">SRR7768929</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR150.bam">MPR150</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768928" target="_blank">SRR7768928</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR151.bam">MPR151</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768927" target="_blank">SRR7768927</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR152.bam">MPR152</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768926" target="_blank">SRR7768926</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR153.bam">MPR153</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768925" target="_blank">SRR7768925</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR154.bam">MPR154</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768924" target="_blank">SRR7768924</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR155.bam">MPR155</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768933" target="_blank">SRR7768933</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR156.bam">MPR156</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Pennsylvania </td>
+						<td style="text-align:left;"> PEN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768932" target="_blank">SRR7768932</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/US_SEF_01.bam">US_SEF_01</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> SE Farallon Island </td>
+						<td style="text-align:left;"> SEF </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> . </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/US_SEF_03.bam">US_SEF_03</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> SE Farallon Island </td>
+						<td style="text-align:left;"> SEF </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> . </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR159.bam">MPR159</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768886" target="_blank">SRR7768886</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR161.bam">MPR161</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768887" target="_blank">SRR7768887</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR162.bam">MPR162</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768884" target="_blank">SRR7768884</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR163.bam">MPR163</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768885" target="_blank">SRR7768885</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR164.bam">MPR164</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768890" target="_blank">SRR7768890</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR165.bam">MPR165</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768891" target="_blank">SRR7768891</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR166.bam">MPR166</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768888" target="_blank">SRR7768888</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR167.bam">MPR167</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768889" target="_blank">SRR7768889</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR168.bam">MPR168</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768892" target="_blank">SRR7768892</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MPR169.bam">MPR169</a> </td>
+						<td style="text-align:left;"> dom </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> US </td>
+						<td style="text-align:left;"> Virginia </td>
+						<td style="text-align:left;"> VIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR7768893" target="_blank">SRR7768893</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AFG1.bam">AFG1</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> AF </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> MAZ </td>
+						<td style="text-align:left;"> Camp Marmal,  Mazar-e-Sharif </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425295" target="_blank">ERR1425295</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425296" target="_blank">ERR1425296</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425297" target="_blank">ERR1425297</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425298" target="_blank">ERR1425298</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AFG2.bam">AFG2</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> AF </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> MAZ </td>
+						<td style="text-align:left;"> Camp Marmal,  Mazar-e-Sharif </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425299" target="_blank">ERR1425299</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425300" target="_blank">ERR1425300</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425301" target="_blank">ERR1425301</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425302" target="_blank">ERR1425302</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AFG3.bam">AFG3</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> AF </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> MAZ </td>
+						<td style="text-align:left;"> Camp Marmal,  Mazar-e-Sharif </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425303" target="_blank">ERR1425303</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425304" target="_blank">ERR1425304</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425305" target="_blank">ERR1425305</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425306" target="_blank">ERR1425306</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AFG4.bam">AFG4</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> AF </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> MAZ </td>
+						<td style="text-align:left;"> Camp Marmal,  Mazar-e-Sharif </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425307" target="_blank">ERR1425307</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425308" target="_blank">ERR1425308</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425309" target="_blank">ERR1425309</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425310" target="_blank">ERR1425310</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AFG5.bam">AFG5</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> AF </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> MAZ </td>
+						<td style="text-align:left;"> Camp Marmal,  Mazar-e-Sharif </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425311" target="_blank">ERR1425311</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425312" target="_blank">ERR1425312</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425313" target="_blank">ERR1425313</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425314" target="_blank">ERR1425314</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AFG6.bam">AFG6</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> AF </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> MAZ </td>
+						<td style="text-align:left;"> Camp Marmal,  Mazar-e-Sharif </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425315" target="_blank">ERR1425315</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425316" target="_blank">ERR1425316</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425317" target="_blank">ERR1425317</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1425318" target="_blank">ERR1425318</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0608.bam">MG0608</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Aksu </td>
+						<td style="text-align:left;"> AKS </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271649" target="_blank">DRR271649</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0871.bam">MG0871</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Dunhuang </td>
+						<td style="text-align:left;"> DHG </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271661" target="_blank">DRR271661</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0747.bam">MG0747</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Hotan </td>
+						<td style="text-align:left;"> HOT </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271657" target="_blank">DRR271657</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG5086.bam">MG5086</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Jiayuguan </td>
+						<td style="text-align:left;"> JYG </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271679" target="_blank">DRR271679</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0686.bam">MG0686</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Kashgar </td>
+						<td style="text-align:left;"> KGR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271652" target="_blank">DRR271652</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0721.bam">MG0721</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Lhasa </td>
+						<td style="text-align:left;"> LHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271656" target="_blank">DRR271656</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0715.bam">MG0715</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Lhasa </td>
+						<td style="text-align:left;"> LHA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271655" target="_blank">DRR271655</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0507.bam">MG0507</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Lanzhou </td>
+						<td style="text-align:left;"> LZH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271644" target="_blank">DRR271644</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0597.bam">MG0597</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Manas </td>
+						<td style="text-align:left;"> MAN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271648" target="_blank">DRR271648</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0863.bam">MG0863</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Manzhouli </td>
+						<td style="text-align:left;"> MNZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271660" target="_blank">DRR271660</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0631.bam">MG0631</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Mohe </td>
+						<td style="text-align:left;"> MOH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271651" target="_blank">DRR271651</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0992.bam">MG0992</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Qiqihar </td>
+						<td style="text-align:left;"> QIQ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271664" target="_blank">DRR271664</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0611.bam">MG0611</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Tacheng </td>
+						<td style="text-align:left;"> TCH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271650" target="_blank">DRR271650</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0565.bam">MG0565</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Xining </td>
+						<td style="text-align:left;"> ZIN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271646" target="_blank">DRR271646</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0713.bam">MG0713</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> CN </td>
+						<td style="text-align:left;"> Zhenjiang </td>
+						<td style="text-align:left;"> ZJG </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271654" target="_blank">DRR271654</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/CR25.bam">CR25</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> CZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> BRZ </td>
+						<td style="text-align:left;"> Breznik </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124334" target="_blank">ERR1124334</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/CR23.bam">CR23</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> CZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> DUK </td>
+						<td style="text-align:left;"> Dukovany </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124333" target="_blank">ERR1124333</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/CR59.bam">CR59</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> CZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> KRO </td>
+						<td style="text-align:left;"> Krokocin </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124337" target="_blank">ERR1124337</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/CR16.bam">CR16</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> CZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> LHA </td>
+						<td style="text-align:left;"> Lhanice 27 </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124332" target="_blank">ERR1124332</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/CR12.bam">CR12</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> CZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> MOH </td>
+						<td style="text-align:left;"> Mohelno </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124330" target="_blank">ERR1124330</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/CR13.bam">CR13</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> CZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> MOH </td>
+						<td style="text-align:left;"> Mohelno </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124331" target="_blank">ERR1124331</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/CR46.bam">CR46</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> CZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> MOH </td>
+						<td style="text-align:left;"> Mohelno,  Hosek </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124336" target="_blank">ERR1124336</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/CR29.bam">CR29</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> CZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TBN </td>
+						<td style="text-align:left;"> 2,  Taubenstall </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124335" target="_blank">ERR1124335</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3044.bam">MG3044</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> EE </td>
+						<td style="text-align:left;"> Tallinn </td>
+						<td style="text-align:left;"> TAL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271674" target="_blank">DRR271674</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0417.bam">MG0417</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> Mashhad </td>
+						<td style="text-align:left;"> MSH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271640" target="_blank">DRR271640</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG5135.bam">MG5135</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> IR </td>
+						<td style="text-align:left;"> Now Shahr </td>
+						<td style="text-align:left;"> NWS </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271680" target="_blank">DRR271680</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS1464.bam">HS1464</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Aktobe </td>
+						<td style="text-align:left;"> AKT </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271611" target="_blank">DRR271611</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0230.bam">MG0230</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Ashiro </td>
+						<td style="text-align:left;"> ASH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271637" target="_blank">DRR271637</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4056.bam">HS4056</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Fujisawa </td>
+						<td style="text-align:left;"> FUJ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271627" target="_blank">DRR271627</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4272.bam">HS4272</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Fukuoka </td>
+						<td style="text-align:left;"> FUK </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271634" target="_blank">DRR271634</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS2323.bam">HS2323</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Hakodate </td>
+						<td style="text-align:left;"> HAK </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271614" target="_blank">DRR271614</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4120.bam">HS4120</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Ishii </td>
+						<td style="text-align:left;"> ISH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271629" target="_blank">DRR271629</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4097.bam">HS4097</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Misasa </td>
+						<td style="text-align:left;"> MIS </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271628" target="_blank">DRR271628</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS2326.bam">HS2326</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Nayoro </td>
+						<td style="text-align:left;"> NAY </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271615" target="_blank">DRR271615</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS2815.bam">HS2815</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Nonoichi </td>
+						<td style="text-align:left;"> NON </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271619" target="_blank">DRR271619</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4271.bam">HS4271</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Setana </td>
+						<td style="text-align:left;"> SET </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271633" target="_blank">DRR271633</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS2445.bam">HS2445</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Takikawa </td>
+						<td style="text-align:left;"> TAK </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271617" target="_blank">DRR271617</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0296.bam">MG0296</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Teine </td>
+						<td style="text-align:left;"> TNE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271638" target="_blank">DRR271638</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0297.bam">MG0297</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Teine </td>
+						<td style="text-align:left;"> TNE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271639" target="_blank">DRR271639</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS3538.bam">HS3538</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Tono </td>
+						<td style="text-align:left;"> TON </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271621" target="_blank">DRR271621</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4169.bam">HS4169</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Tsukuba </td>
+						<td style="text-align:left;"> TSU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271630" target="_blank">DRR271630</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4273.bam">HS4273</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Yamaguchi </td>
+						<td style="text-align:left;"> YGC </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271635" target="_blank">DRR271635</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS3534.bam">HS3534</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> JP </td>
+						<td style="text-align:left;"> Yamagata </td>
+						<td style="text-align:left;"> YGT </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271620" target="_blank">DRR271620</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AL1.bam">AL1</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> KZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ALM </td>
+						<td style="text-align:left;"> Almaty,  1,  horse stable </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124338" target="_blank">ERR1124338</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AL16.bam">AL16</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> KZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ALM </td>
+						<td style="text-align:left;"> Almaty,  16,  Hippodrome </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124339" target="_blank">ERR1124339</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AL19.bam">AL19</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> KZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ALM </td>
+						<td style="text-align:left;"> Almaty,  16,  Hippodrome </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124340" target="_blank">ERR1124340</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AL33.bam">AL33</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> KZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ALM </td>
+						<td style="text-align:left;"> Almaty,  25 </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124341" target="_blank">ERR1124341</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AL38.bam">AL38</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> KZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ALM </td>
+						<td style="text-align:left;"> Almaty,  21 </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124342" target="_blank">ERR1124342</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AL40.bam">AL40</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> KZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ALM </td>
+						<td style="text-align:left;"> Almaty,  22 </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124343" target="_blank">ERR1124343</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AL41.bam">AL41</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> KZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ALM </td>
+						<td style="text-align:left;"> Almaty,  26 </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124344" target="_blank">ERR1124344</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/AL42.bam">AL42</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> KZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ALM </td>
+						<td style="text-align:left;"> Almaty,  24 </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124345" target="_blank">ERR1124345</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS3612.bam">HS3612</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Astrakhan </td>
+						<td style="text-align:left;"> AST </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271626" target="_blank">DRR271626</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3026.bam">MG3026</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Birakan </td>
+						<td style="text-align:left;"> BIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271672" target="_blank">DRR271672</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3004.bam">MG3004</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Birakan </td>
+						<td style="text-align:left;"> BIR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271665" target="_blank">DRR271665</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3012.bam">MG3012</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Chita </td>
+						<td style="text-align:left;"> CHT </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271669" target="_blank">DRR271669</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS3605.bam">HS3605</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Gorno-Altaysk </td>
+						<td style="text-align:left;"> GRN </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271623" target="_blank">DRR271623</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS3608.bam">HS3608</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Irkutsk </td>
+						<td style="text-align:left;"> IRK </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271625" target="_blank">DRR271625</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3037.bam">MG3037</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Khabarovsk </td>
+						<td style="text-align:left;"> KHB </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271673" target="_blank">DRR271673</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3007.bam">MG3007</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Krementui </td>
+						<td style="text-align:left;"> KRE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271666" target="_blank">DRR271666</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3008.bam">MG3008</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Krementui </td>
+						<td style="text-align:left;"> KRE </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271667" target="_blank">DRR271667</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3010.bam">MG3010</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Nouth Caucasus </td>
+						<td style="text-align:left;"> NCA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271668" target="_blank">DRR271668</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS3607.bam">HS3607</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Okha </td>
+						<td style="text-align:left;"> OKH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271624" target="_blank">DRR271624</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3045.bam">MG3045</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Poronaysk </td>
+						<td style="text-align:left;"> POR </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271675" target="_blank">DRR271675</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3018.bam">MG3018</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Rudnaya Pristan </td>
+						<td style="text-align:left;"> RUD </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271670" target="_blank">DRR271670</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS3604.bam">HS3604</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Tomsk </td>
+						<td style="text-align:left;"> TOM </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271622" target="_blank">DRR271622</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3048.bam">MG3048</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> RU </td>
+						<td style="text-align:left;"> Yuzhno-Sakhalinsk </td>
+						<td style="text-align:left;"> YUZ </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271676" target="_blank">DRR271676</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG0444.bam">MG0444</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SK </td>
+						<td style="text-align:left;"> Busan </td>
+						<td style="text-align:left;"> BUS </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271641" target="_blank">DRR271641</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS0682.bam">HS0682</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SK </td>
+						<td style="text-align:left;"> Baengnyeong Island </td>
+						<td style="text-align:left;"> BYG </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271608" target="_blank">DRR271608</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS1368.bam">HS1368</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SK </td>
+						<td style="text-align:left;"> Geoncheon </td>
+						<td style="text-align:left;"> GCH </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271609" target="_blank">DRR271609</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4238.bam">HS4238</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SK </td>
+						<td style="text-align:left;"> Ganghwa Island </td>
+						<td style="text-align:left;"> GHW </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271632" target="_blank">DRR271632</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/HS4233.bam">HS4233</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> SK </td>
+						<td style="text-align:left;"> Hwacheon-gun </td>
+						<td style="text-align:left;"> HWA </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271631" target="_blank">DRR271631</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/MG3066.bam">MG3066</a> </td>
+						<td style="text-align:left;"> mus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> UA </td>
+						<td style="text-align:left;"> Donetsk </td>
+						<td style="text-align:left;"> DON </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/DRR271678" target="_blank">DRR271678</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/Mus_spicilegus.bam">Mus_spicilegus</a> </td>
+						<td style="text-align:left;"> spicilegus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> HU </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> UNK </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/SRR3601858" target="_blank">SRR3601858</a>, <a href="https://www.ebi.ac.uk/ena/browser/view/SRR3601859" target="_blank">SRR3601859</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/SP36.bam">SP36</a> </td>
+						<td style="text-align:left;"> spretus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> ES </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TOL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124346" target="_blank">ERR1124346</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/SP39.bam">SP39</a> </td>
+						<td style="text-align:left;"> spretus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> ES </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TOL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124347" target="_blank">ERR1124347</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/SP41.bam">SP41</a> </td>
+						<td style="text-align:left;"> spretus </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> ES </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TOL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124348" target="_blank">ERR1124348</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/SP51.bam">SP51</a> </td>
+						<td style="text-align:left;"> spretus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> ES </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TOL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124349" target="_blank">ERR1124349</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/SP62.bam">SP62</a> </td>
+						<td style="text-align:left;"> spretus </td>
+						<td style="text-align:left;"> F </td>
+						<td style="text-align:left;"> ES </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TOL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124350" target="_blank">ERR1124350</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/SP68.bam">SP68</a> </td>
+						<td style="text-align:left;"> spretus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> ES </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TOL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124351" target="_blank">ERR1124351</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/SP69.bam">SP69</a> </td>
+						<td style="text-align:left;"> spretus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> ES </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TOL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124352" target="_blank">ERR1124352</a> </td>
+						</tr>
+						<tr>
+						<td style="text-align:left;"> <a href="https://wild-mouse-genomes.s3.amazonaws.com/SP70.bam">SP70</a> </td>
+						<td style="text-align:left;"> spretus </td>
+						<td style="text-align:left;"> M </td>
+						<td style="text-align:left;"> ES </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> TOL </td>
+						<td style="text-align:left;"> . </td>
+						<td style="text-align:left;"> <a href="https://www.ebi.ac.uk/ena/browser/view/ERR1124353" target="_blank">ERR1124353</a> </td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="footer">
+				<p>&copy; APM 2022.  Styled with <a href="http://getbootstrap.com/">Bootstrap</a>. Mouse icon from <a href="http://phylopic.org/" target="_blank">Phylopic</a>.</p>
+			</div>
+
+		</div> <!-- /container -->
+
+	</body>
+</html>
